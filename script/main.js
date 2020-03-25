@@ -2,9 +2,16 @@ const pushmenu = document.querySelector('#pushmenu')
 const mainSidebar = document.querySelector('.main-sidebar')
 const contentWrapper = document.querySelector('.content-wrapper')
 const mainNavbar = document.querySelector('.main-header.navbar')
+const layoutFixed = document.querySelector('.layout-fixed')
 
 pushmenu.addEventListener('click', () => {
     mainSidebar.classList.add('show')
+    layoutFixed.style.display = 'block'
+})
+
+layoutFixed.addEventListener('click', () => {
+    layoutFixed.style.display = 'none'
+    mainSidebar.classList.remove('show')
 })
 
 const resizeQuery = () => {
